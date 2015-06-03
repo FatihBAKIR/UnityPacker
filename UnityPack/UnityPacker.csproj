@@ -7,8 +7,8 @@
     <ProjectGuid>{765AC4AF-8B5F-455F-8D4D-4DA1EA4C442E}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>UnityPack</RootNamespace>
-    <AssemblyName>UnityPack</AssemblyName>
+    <RootNamespace>UnityPacker</RootNamespace>
+    <AssemblyName>UnityPacker</AssemblyName>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

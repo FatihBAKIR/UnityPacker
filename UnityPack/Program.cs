@@ -7,7 +7,7 @@ using ICSharpCode.SharpZipLib;
 using ICSharpCode.SharpZipLib.GZip;
 using ICSharpCode.SharpZipLib.Tar;
 
-namespace UnityPack
+namespace UnityPacker
 {
     class Program
     {
@@ -16,7 +16,7 @@ namespace UnityPack
             if (args.Length < 2)
             {
                 Console.WriteLine("Usage:");
-                Console.WriteLine("UnityPack {Source Path} {Package Name = \"Package\"} {Root Path = \"\"} {Skipped Extensions (CSV) = \"\"} {Skipped Directories (CSV) = \"\"}");
+                Console.WriteLine("UnityPacker {Source Path} {Package Name = \"Package\"} {Root Path = \"\"} {Skipped Extensions (CSV) = \"\"} {Skipped Directories (CSV) = \"\"}");
                 return;
             }
             
@@ -67,7 +67,6 @@ namespace UnityPack
                         }
                     }
                     hash1 = hash;
-                    Console.WriteLine(metaFile);
                 }
 
                 string path = Path.Combine(tmpPath, hash1);
