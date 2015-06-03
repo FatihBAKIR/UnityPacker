@@ -20,3 +20,5 @@ You can skip whole directories with the `directories` option.
 
 + Sizes of the packages exported from Unity itself and UnityPacker are usually the same, 
 however for big packages, UnityPacker will produce smaller packages due to not including unnecessary meta files directly.
+
+*Was tested on Unity 4 and 5.*
