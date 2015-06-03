@@ -4,3 +4,8 @@ C:\Users\Fatih\Documents\Projects\UnityPacker\UnityPack\bin\Debug\ICSharpCode.Sh
 C:\Users\Fatih\Documents\Projects\UnityPacker\UnityPack\obj\Debug\UnityPacker.csprojResolveAssemblyReference.cache
 C:\Users\Fatih\Documents\Projects\UnityPacker\UnityPack\obj\Debug\UnityPacker.exe
 C:\Users\Fatih\Documents\Projects\UnityPacker\UnityPack\obj\Debug\UnityPacker.pdb
+C:\Users\Fatih\Documents\Projects\UnityPacker\Source\UnityPack\obj\Debug\UnityPacker.exe
+C:\Users\Fatih\Documents\Projects\UnityPacker\Source\UnityPack\obj\Debug\UnityPacker.pdb
+C:\Users\Fatih\Documents\Projects\UnityPacker\Source\UnityPack\bin\Debug\UnityPacker.exe
+C:\Users\Fatih\Documents\Projects\UnityPacker\Source\UnityPack\bin\Debug\UnityPacker.pdb
+C:\Users\Fatih\Documents\Projects\UnityPacker\Source\UnityPack\obj\Debug\UnityPacker.csprojResolveAssemblyReference.cache
