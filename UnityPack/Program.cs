@@ -25,6 +25,7 @@ namespace UnityPack
             string root = args.Length > 2 ? args[2] : "";
             string[] exts = args.Length > 3 ? args[3].Split(',') : new string[0];
             string[] dirs = args.Length > 4 ? args[4].Split(',') : new string[0];
+            bool meaningfulHashes = true;
         
             List<string> extensions = new List<string>(exts);
             
@@ -42,11 +43,32 @@ namespace UnityPack
                         skip = true;
                         break;
                     }
-                
-                if (skip || extensions.Contains(Path.GetExtension(file).Replace(".", "")))
+
+                string extension = Path.GetExtension(file).Replace(".", "");
+                if (skip || extensions.Contains(extension))
                     continue;
                 
                 string hash1 = RandomHash(), hash2 = RandomHash();
+
+                if (meaningfulHashes)
+                {
+                    string metaFile = file + ".meta";
+                    string hash = "";
+                    using (StreamReader read = new StreamReader(metaFile))
+                    {
+                        while (!read.EndOfStream)
+                        {
+                            string line = read.ReadLine();
+                            if (line.StartsWith("guid"))
+                            {
+                                hash = line.Split(' ')[1];
+                                break;
+                            }
+                        }
+                    }
+                    hash1 = hash;
+                    Console.WriteLine(metaFile);
+                }
 
                 string path = Path.Combine(tmpPath, hash1);
                 Directory.CreateDirectory(path);
