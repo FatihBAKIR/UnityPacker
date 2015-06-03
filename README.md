@@ -1,6 +1,6 @@
 # UnityPacker
 
-UnityPacker is a small tool that can create `UnityPackage` files without a Unity installation.
+UnityPacker is a small command line tool that can create `UnityPackage` files without a Unity installation. It is great for automated builds of Unity tools.
 
 Usage is very simple:
 
