@@ -147,9 +147,8 @@ namespace UnityPacker
             string[] filenames = Directory.GetFiles(sourceDirectory);
             foreach (string filename in filenames)
             {
-                Console.Write(filename + " || ");
-                Console.WriteLine(tarArchive.RootPath);
                 tarEntry = TarEntry.CreateEntryFromFile(filename);
+                tarEntry.Name = filename.Remove(0, tarArchive.RootPath.Length);
                 tarArchive.WriteEntry(tarEntry, true);
             }
 
