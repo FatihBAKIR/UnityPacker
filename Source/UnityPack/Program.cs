@@ -149,6 +149,7 @@ namespace UnityPacker
             {
                 tarEntry = TarEntry.CreateEntryFromFile(filename);
                 tarEntry.Name = filename.Remove(0, tarArchive.RootPath.Length);
+                Console.WriteLine(tarEntry.Name);
                 tarArchive.WriteEntry(tarEntry, true);
             }
 
