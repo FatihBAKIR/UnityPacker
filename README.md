@@ -44,7 +44,7 @@ Let's focus on the line I'm using UnityPacker:
 2. `QuarkDefault` : Name of the output package.
 3. `no` : There are no meta files, create random hashes.
 4. `"Assets/QuarkDefault"` : This argument determines the root path of the extracted contents when unpacked with Unity.
-5. `"gitignore,md,exe,dll" : Skipped file extensions. Files with these extensions will not be included in the output package.
+5. `"gitignore,md,exe,dll"` : Skipped file extensions. Files with these extensions will not be included in the output package.
 6. `".git"` : Similar to the 5th argument. Files in the .git directory will not be included in the output package.
 
 *Was tested on Unity 4 and 5 with packages from both Windows and Linux hosts.*
