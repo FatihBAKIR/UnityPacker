@@ -142,8 +142,8 @@ namespace UnityPacker
         private static void AddDirectoryFilesToTar(TarArchive tarArchive, string sourceDirectory, bool recurse)
         {
             TarEntry tarEntry = TarEntry.CreateEntryFromFile(sourceDirectory);
-            tarEntry.Name = sourceDirectory.Remove(0, tarArchive.RootPath.Length + 1);
-            tarArchive.WriteEntry(tarEntry, false);
+            //tarEntry.Name = sourceDirectory.Remove(0, tarArchive.RootPath.Length + 1);
+            //tarArchive.WriteEntry(tarEntry, false);
 
             string[] filenames = Directory.GetFiles(sourceDirectory);
             foreach (string filename in filenames)

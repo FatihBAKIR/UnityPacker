@@ -1,5 +1,0 @@
-/root/UnityPacker/Source/UnityPack/bin/Debug/UnityPacker.exe.mdb
-/root/UnityPacker/Source/UnityPack/bin/Debug/UnityPacker.exe
-/root/UnityPacker/Source/UnityPack/obj/Debug/UnityPacker.exe
-/root/UnityPacker/Source/UnityPack/obj/Debug/UnityPacker.exe.mdb
-/root/UnityPacker/Source/UnityPack/bin/Debug/ICSharpCode.SharpZipLib.dll
