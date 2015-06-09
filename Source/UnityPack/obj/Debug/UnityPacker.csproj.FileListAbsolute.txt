@@ -9,3 +9,9 @@ C:\Users\Fatih\Documents\Projects\UnityPacker\Source\UnityPack\obj\Debug\UnityPa
 C:\Users\Fatih\Documents\Projects\UnityPacker\Source\UnityPack\bin\Debug\UnityPacker.exe
 C:\Users\Fatih\Documents\Projects\UnityPacker\Source\UnityPack\bin\Debug\UnityPacker.pdb
 C:\Users\Fatih\Documents\Projects\UnityPacker\Source\UnityPack\obj\Debug\UnityPacker.csprojResolveAssemblyReference.cache
+C:\Users\Fatih\Documents\Visual Studio 2013\Projects\UnityPack\Source\UnityPack\obj\Debug\UnityPacker.exe
+C:\Users\Fatih\Documents\Visual Studio 2013\Projects\UnityPack\Source\UnityPack\bin\Debug\UnityPacker.exe
+C:\Users\Fatih\Documents\Visual Studio 2013\Projects\UnityPack\Source\UnityPack\bin\Debug\UnityPacker.pdb
+C:\Users\Fatih\Documents\Visual Studio 2013\Projects\UnityPack\Source\UnityPack\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\Fatih\Documents\Visual Studio 2013\Projects\UnityPack\Source\UnityPack\obj\Debug\UnityPacker.csprojResolveAssemblyReference.cache
+C:\Users\Fatih\Documents\Visual Studio 2013\Projects\UnityPack\Source\UnityPack\obj\Debug\UnityPacker.pdb

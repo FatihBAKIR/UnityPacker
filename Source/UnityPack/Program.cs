@@ -86,7 +86,6 @@ namespace UnityPacker
                     writer.Write(root + altName.Replace(Path.DirectorySeparatorChar + "", "/") + "\n" + hash2);
             }
 
-			Console.WriteLine(tmpPath);
             CreateTarGZ(fileName  + ".unitypackage", tmpPath);
 
             Directory.Delete(tmpPath, true);
@@ -99,12 +98,10 @@ namespace UnityPacker
 
         static string CreateMd5(string input)
         {
-            // Use input string to calculate MD5 hash
-            MD5 md5 = System.Security.Cryptography.MD5.Create();
-            byte[] inputBytes = System.Text.Encoding.ASCII.GetBytes(input);
+            MD5 md5 = MD5.Create();
+            byte[] inputBytes = Encoding.ASCII.GetBytes(input);
             byte[] hashBytes = md5.ComputeHash(inputBytes);
 
-            // Convert the byte array to hexadecimal string
             StringBuilder sb = new StringBuilder();
             for (int i = 0; i < hashBytes.Length; i++)
             {
@@ -127,15 +124,10 @@ namespace UnityPacker
 
         private static void CreateTarGZ(string tgzFilename, string sourceDirectory)
         {
-
             Stream outStream = File.Create(tgzFilename);
             Stream gzoStream = new GZipOutputStream(outStream);
             TarArchive tarArchive = TarArchive.CreateOutputTarArchive(gzoStream);
 
-            // Note that the RootPath is currently case sensitive and must be forward slashes e.g. "c:/temp"
-            // and must not end with a slash, otherwise cuts off first char of filename
-            // This is scheduled for fix in next release
-            
 			Console.WriteLine(sourceDirectory);
 			tarArchive.RootPath = sourceDirectory.Replace('\\', '/');
             if (tarArchive.RootPath.EndsWith("/"))
@@ -146,20 +138,17 @@ namespace UnityPacker
 
             tarArchive.Close();
         }
+
         private static void AddDirectoryFilesToTar(TarArchive tarArchive, string sourceDirectory, bool recurse)
         {
-
-            // Optionally, write an entry for the directory itself.
-            // Specify false for recursion here if we will add the directory's files individually.
-            //
             TarEntry tarEntry = TarEntry.CreateEntryFromFile(sourceDirectory);
             tarArchive.WriteEntry(tarEntry, false);
 
-            // Write each file to the tar.
-            //
             string[] filenames = Directory.GetFiles(sourceDirectory);
             foreach (string filename in filenames)
             {
+                Console.Write(filename + " || ");
+                Console.WriteLine(tarArchive.RootPath);
                 tarEntry = TarEntry.CreateEntryFromFile(filename);
                 tarArchive.WriteEntry(tarEntry, true);
             }
@@ -168,7 +157,7 @@ namespace UnityPacker
             {
                 string[] directories = Directory.GetDirectories(sourceDirectory);
                 foreach (string directory in directories)
-                    AddDirectoryFilesToTar(tarArchive, directory, recurse);
+                    AddDirectoryFilesToTar(tarArchive, directory, true);
             }
         }
     }
