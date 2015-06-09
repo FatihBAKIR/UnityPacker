@@ -37,11 +37,16 @@ namespace UnityPacker
             string tmpPath = Path.Combine(Path.GetTempPath(), "packUnity" + RandomStuff(8));
             Directory.CreateDirectory(tmpPath);
 
-            foreach (string file in files)
-            {
-                bool skip = false;
+			for	(int i = 0; i < files.Length; ++i)
+			{
+				string file = files[i];
+				string altName = file;
+				if (file.StartsWith("."))
+                	altName = file.Replace("." + Path.DirectorySeparatorChar, "");
+				
+				bool skip = false;
                 foreach (string dir in dirs)
-                    if (file.Replace(".\\", "").StartsWith(dir))
+                    if (altName.StartsWith(dir))
                     {
                         skip = true;
                         break;
@@ -78,9 +83,10 @@ namespace UnityPacker
 
                 File.Copy(file, Path.Combine(path, "asset"));
                 using (StreamWriter writer = new StreamWriter(Path.Combine(path, "pathname")))
-                    writer.Write(root + file.Replace(".\\", "").Replace("\\", "/") + "\n" + hash2);
+                    writer.Write(root + altName.Replace(Path.DirectorySeparatorChar + "", "/") + "\n" + hash2);
             }
 
+			Console.WriteLine(tmpPath);
             CreateTarGZ(fileName  + ".unitypackage", tmpPath);
 
             Directory.Delete(tmpPath, true);
@@ -129,9 +135,12 @@ namespace UnityPacker
             // Note that the RootPath is currently case sensitive and must be forward slashes e.g. "c:/temp"
             // and must not end with a slash, otherwise cuts off first char of filename
             // This is scheduled for fix in next release
-            tarArchive.RootPath = sourceDirectory.Replace('\\', '/');
+            
+			Console.WriteLine(sourceDirectory);
+			tarArchive.RootPath = sourceDirectory.Replace('\\', '/');
             if (tarArchive.RootPath.EndsWith("/"))
                 tarArchive.RootPath = tarArchive.RootPath.Remove(tarArchive.RootPath.Length - 1);
+			Console.WriteLine(tarArchive.RootPath);
 
             AddDirectoryFilesToTar(tarArchive, sourceDirectory, true);
 
