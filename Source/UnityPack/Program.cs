@@ -29,7 +29,7 @@ namespace UnityPacker
 
             List<string> extensions = new List<string>(exts)
             {
-                "meta"
+                //"meta"
             };
             
             string[] files = Directory.GetFiles(inpath, "*.*", SearchOption.AllDirectories);
