@@ -35,8 +35,8 @@ If no meta file exists for a file, it will be automatically generated.
 
 Such a run will create a file called `MyAssets.unitypackage` with the contents of this directory,
 omitting files with extensions `gitignore, md, exe, dll` and the directory `.git`. When imported
-by unity, all files will be put in `MyAssets` folder in project. The first `Assets/` is mandatory
-for unity to be able to import the package.
+by unity, all files will be put in `MyAssets` folder in project. The path starts from unity project
+root, so if it doesn't start with `Assets/` it won't show up in the editor!
 
 	./UnityUnpack MyAssets.unitypackage .
 
