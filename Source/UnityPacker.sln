@@ -5,6 +5,10 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityPacker", "UnityPack\UnityPacker.csproj", "{765AC4AF-8B5F-455F-8D4D-4DA1EA4C442E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibPack", "LibPack\LibPack.csproj", "{64B390F7-C794-478E-BBE2-203A69A35CC6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityUnpack", "UnityUnpack\UnityUnpack.csproj", "{B5D4485F-8F27-4BE2-AD65-051169ED9453}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{765AC4AF-8B5F-455F-8D4D-4DA1EA4C442E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{765AC4AF-8B5F-455F-8D4D-4DA1EA4C442E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{765AC4AF-8B5F-455F-8D4D-4DA1EA4C442E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64B390F7-C794-478E-BBE2-203A69A35CC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64B390F7-C794-478E-BBE2-203A69A35CC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64B390F7-C794-478E-BBE2-203A69A35CC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64B390F7-C794-478E-BBE2-203A69A35CC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5D4485F-8F27-4BE2-AD65-051169ED9453}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5D4485F-8F27-4BE2-AD65-051169ED9453}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5D4485F-8F27-4BE2-AD65-051169ED9453}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5D4485F-8F27-4BE2-AD65-051169ED9453}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
