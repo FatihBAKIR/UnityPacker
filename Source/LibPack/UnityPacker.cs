@@ -111,8 +111,8 @@ namespace UnityPacker
         /// <summary>
         /// Generates a .unitypackage file from this package
         /// </summary>
-        /// <param name="root">Root directory name</param>
-        public void GeneratePackage(string root = "")
+        /// <param name="root">Root directory name, usually starts with Assets/</param>
+        public void GeneratePackage(string root = "Assets/")
         {
             var tmpPath = Path.Combine(Path.GetTempPath(), "packUnity" + _name);
             if (Directory.Exists(tmpPath))

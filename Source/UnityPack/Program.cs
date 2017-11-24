@@ -18,6 +18,7 @@ namespace UnityPacker
             var inpath = args[0];
             var fileName = args.Length > 1 ? args[1] : "Package";
             var respectMeta = args.Length <= 2 || (args[2].ToLower() == "y" || args[2].ToLower() == "yes");
+            var rootDir = args.Length > 3 ? args[3] : "Assets/";
             var exts = args.Length > 4 ? args[4].Split(',') : new string[0];
             var dirs = args.Length > 5 ? args[5].Split(',') : new string[0];
 
@@ -28,7 +29,7 @@ namespace UnityPacker
 
             // Create a package object from the given directory
             var pack = Package.FromDirectory(inpath, fileName, respectMeta, extensions.ToArray(), dirs);
-            pack.GeneratePackage();
+            pack.GeneratePackage(rootDir);
         }
     }
 }
