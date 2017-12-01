@@ -154,7 +154,7 @@ namespace UnityPacker
                 var fi = new FileInfo(Path.Combine(fdirpath, "asset.meta"));
                 using (var fs = fi.Open(FileMode.Open))
                 {
-                    fs.SetLength(fi.Length - 4);
+                    fs.SetLength(fi.Length - 3 - Environment.NewLine.Length);
                 }
             }
 
@@ -282,7 +282,7 @@ namespace UnityPacker
                 var fi = new FileInfo(metaPath);
                 using (var fs = fi.Open(FileMode.Open))
                 {
-                    fs.SetLength(fi.Length - 4);
+                    fs.SetLength(fi.Length - 3 - Environment.NewLine.Length);
                 }
             }
         }
